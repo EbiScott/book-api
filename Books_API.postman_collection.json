@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Next Book\",\r\n  \"author\": \"Next Author\",\r\n  \"publishedDate\": \"2023-01-01\",\r\n  \"isbn\": \"123456768590\"\r\n}\r\n",
+					"raw": "{\r\n  \"title\": \"Today's Book\",\r\n  \"author\": \"Tomorrow's Author\",\r\n  \"publishedDate\": \"2023-01-01\",\r\n  \"isbn\": \"1234532456780\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -21,15 +21,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/books",
-					"protocol": "http",
+					"raw": "https://book-api-lake.vercel.app/api/books/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"book-api-lake",
+						"vercel",
+						"app"
 					],
-					"port": "5000",
 					"path": [
 						"api",
-						"books"
+						"books",
+						""
 					]
 				}
 			},
@@ -41,15 +43,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/books",
-					"protocol": "http",
+					"raw": "https://book-api-lake.vercel.app/api/books/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"book-api-lake",
+						"vercel",
+						"app"
 					],
-					"port": "5000",
 					"path": [
 						"api",
-						"books"
+						"books",
+						""
 					]
 				}
 			},
@@ -62,7 +66,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Updated Book\",\r\n  \"author\": \"Updated Author\",\r\n  \"publishedDate\": \"2023-01-01\",\r\n  \"isbn\": \"0987654321\"\r\n}\r\n",
+					"raw": "{\r\n  \"title\": \"Up Book\",\r\n  \"author\": \"Up Author\",\r\n  \"publishedDate\": \"2023-01-01\",\r\n  \"isbn\": \"0987654321\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,16 +74,24 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/books/66aa41fa0b0fee22a5b7891f",
-					"protocol": "http",
+					"raw": "https://book-api-lake.vercel.app/api/books/66aa45920b0fee22a5b78921",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"book-api-lake",
+						"vercel",
+						"app"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"books",
-						"66aa41fa0b0fee22a5b7891f"
+						"66aa45920b0fee22a5b78921"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "66aa45920b0fee22a5b78921",
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -88,8 +100,22 @@
 		{
 			"name": "Delete Book by ID",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://book-api-lake.vercel.app/api/books/66aa45920b0fee22a5b78921",
+					"protocol": "https",
+					"host": [
+						"book-api-lake",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"books",
+						"66aa45920b0fee22a5b78921"
+					]
+				}
 			},
 			"response": []
 		}
