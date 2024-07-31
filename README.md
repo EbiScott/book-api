@@ -67,6 +67,23 @@ A RESTful API for managing books, built with Node.js, Express, and MongoDB. This
 - `PUT /api/books/:id` - Update a book by ID
 - `DELETE /api/books/:id` - Delete a book by ID
 
+## Postman Collection
+
+You can test the API endpoints using the Postman collection provided in this repository.
+
+1. **Download the Collection**:
+   - Download the Postman collection from [postman-collection.json](path/to/postman-collection.json).
+
+2. **Import the Collection into Postman**:
+   - Open Postman.
+   - Click on "Import" in the top left.
+   - Select the downloaded `postman-collection.json` file.
+   - Click "Open" to import it into Postman.
+
+3. **Use the Collection**:
+   - You can now use the imported collection to test the API endpoints.
+
+
 ## Contributing
 
 Feel free to open issues or submit pull requests for any improvements or bug fixes. Contributions are welcome!
