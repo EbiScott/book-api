@@ -6,15 +6,11 @@ import {
   updateBook, 
   deleteBook 
 } from '../controllers/bookController';
-import multer from 'multer';
 
 const router = Router();
 
-// Setup multer for file handling
-const upload = multer({ dest: 'uploads/' }); // Adjust destination as needed
-
 // Route to create a new book
-router.post('/books', upload.single('coverImage'), createBook);
+router.post('/books', createBook);
 
 // Route to get all books
 router.get('/books', getBooks);
@@ -23,7 +19,7 @@ router.get('/books', getBooks);
 router.get('/books/:id', getBookById);
 
 // Route to update a specific book by ID
-router.put('/books/:id', upload.single('coverImage'), updateBook);
+router.put('/books/:id', updateBook);
 
 // Route to delete a specific book by ID
 router.delete('/books/:id', deleteBook);
