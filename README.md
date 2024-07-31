@@ -72,7 +72,7 @@ A RESTful API for managing books, built with Node.js, Express, and MongoDB. This
 You can test the API endpoints using the Postman collection provided in this repository.
 
 1. **Download the Collection**:
-   - Download the Postman collection from [postman-collection.json](D:\Programming\Projects\Learning\Node.js\Tobams Group\books-api\Books_API.postman_collection.json).
+   - Download the Postman collection from [postman-collection.json](Books_API.postman_collection.json).
 
 2. **Import the Collection into Postman**:
    - Open Postman.
@@ -83,7 +83,6 @@ You can test the API endpoints using the Postman collection provided in this rep
 3. **Use the Collection**:
    - You can now use the imported collection to test the API endpoints.
 
-
 ## Contributing
 
 Feel free to open issues or submit pull requests for any improvements or bug fixes. Contributions are welcome!
@@ -91,4 +90,3 @@ Feel free to open issues or submit pull requests for any improvements or bug fix
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
