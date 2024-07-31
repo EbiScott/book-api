@@ -1,21 +1,31 @@
-import express from 'express';
-import {
-  createBook,
-  getAllBooks,
-  getBookById,
-  updateBook,
-  deleteBook,
-  updateBookCoverImage
+import { Router } from 'express';
+import { 
+  createBook, 
+  getBooks, 
+  getBookById, 
+  updateBook, 
+  deleteBook 
 } from '../controllers/bookController';
-import upload from '../middlewares/upload';
+import multer from 'multer';
 
-const router = express.Router();
+const router = Router();
 
-router.post('/books', createBook);
-router.get('/books', getAllBooks);
+// Setup multer for file handling
+const upload = multer({ dest: 'uploads/' }); // Adjust destination as needed
+
+// Route to create a new book
+router.post('/books', upload.single('coverImage'), createBook);
+
+// Route to get all books
+router.get('/books', getBooks);
+
+// Route to get a specific book by ID
 router.get('/books/:id', getBookById);
-router.put('/books/:id', updateBook);
+
+// Route to update a specific book by ID
+router.put('/books/:id', upload.single('coverImage'), updateBook);
+
+// Route to delete a specific book by ID
 router.delete('/books/:id', deleteBook);
-router.patch('/books/cover-image/:id', upload.single('coverImage'), updateBookCoverImage);
 
 export default router;
